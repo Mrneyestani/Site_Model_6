@@ -1,0 +1,91 @@
+/* styling for body */
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ff5e24;
+  align-items: center;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.item-nav > ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.item-nav > ul li {
+  margin: 0px 20px;
+}
+
+.item-nav > ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+h1 {
+  margin-top: 100px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  margin: 4px;
+}
+/*select only the link with the exact href value https://www.example.com */
+
+a[href="https://www.example.com"]
+{
+  color: #f4a040;
+  font-size: 24px;
+}
+.gallery img[alt*="art"] {
+  outline: 4px solid #f4a040;
+  outline-offset: 2px;
+}
+
+/* alt attribute contains the word art, as whole or partial word */
+
+.gallery img[alt*="art"] {
+  outline: 4px solid #f4a040;
+  outline-offset: 2px;
+}
+
+/* alt attribute contains art as only value or in space-separated list */
+
+.gallery2 img[alt~="art"] {
+  outline: 4px solid #f4a040;
+  outline-offset: 2px;
+}
+
+/* alt attribute starts with the value "art" */
+
+.gallery3 img[alt^="art"] {
+  outline: 4px solid #f4a040;
+  outline-offset: 2px;
+}
+
+/* class attribute starts with top as the only value or first in a dash-separated list */
+
+li[class|="top"] {
+  color: red;
+  list-style-type: circle;
+}
+
+/* href attribute ends with pdf */
+a[href$="pdf"]::after {
+  content: url("../images/pdf.png");
+  padding-left: 10px;
+}

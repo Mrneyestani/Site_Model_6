@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="logo">
+      <a href="#">Logo</a>
+    </div>
+    <div class="item-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Services</a></li>
+      </ul>
+    </div>
+   <div class="search">
+    <form>
+      <input type="text" placeholder="Search">
+      <button>Go</button>
+    </form>
+   </div>
+   
+  </nav>
+
+
+
+<h1>Exact Match &mdash; [attribute="value"]</h1>
+<p>Here we select the link with the exact href value "https://www.example.com", and change its color and font size. Notice that the link to the almanac is not styled.</p>
+<p><a href="https://www.example.com">CSS-Selectors</a></p>
+<p><a href="#">CSS-Attribute</a></p>
+<hr>
+
+<h2>Attribute Value Contains &mdash; [attribute*="value"]</h2>
+<p>Here we select the images with the full word or word fragment "art" in the alt text and give them an outline. Notice that the images with the alt text "abstract <em>art</em>" and "athlete <em>starting</em> a new sport" both get outlined. </p>
+
+<div class="gallery">
+  <img src="images/photo.jpg" alt="abstract art">
+  <img src="images/photo.jpg" alt="something to eat">
+  <img src="images/photo.jpg" alt="athlete starting a new sport">
+</div>
+<hr>
+
+<h2>Attribute Value is in Space-Separated List &mdash; [attribute~="value"]</h2>
+<p>In the list below, we select images with the word "art" in their alt attribute, either as the only value or as a whole word in a space separated list. Notice that the image with the alt text "athlete starting a new sport" is not outlined like it was in the "Attribute Contains" example.</p>
+<div class="gallery2">
+  <img src="images/photo.jpg" alt="abstract art">
+  <img src="images/photo.jpg" alt="something to eat">
+  <img src="images/photo.jpg" alt="athlete starting a new sport">
+</div>
+<hr>
+
+<h2>Attribute Value Starts With &mdash; [attribute^="value"]</h2>
+<p>Here we select the images with alt text that starts with "art". Notice that the image with the alt text "artistic pattern" is selected, but the image with the alt text "Arthur Miller" is not because attribute selectors are case-sensitive. </p>
+<div class="gallery3">
+  <img src="images/photo.jpg" alt="artistic pattern">
+  <img src="images/photo.jpg" alt="a healthy meal">
+  <img src="images/photo.jpg" alt="Arthur Miller">
+</div>
+<hr>
+
+<h2>Attribute Value is First in Dash-Separated List &mdash; [attribute|="value"]</h2>
+<p>Selecting the list item with a data-decade attribute that has "1900" as the only value or the first in a dash separated list. Notice that only the 2nd list item is selected. The first list item has "1900" in its data attribute value, but it's after the dash.</p>
+<ul>  
+  <li class="top-header">The 19th Century</li>
+  <li class="topcontent">The 21st Century</li>
+  <li class="top-text">The 20th Century</li>
+</ul>
+<hr>
+
+<h2>Attribute Value Ends With &mdash; [attribute$="value"]</h2>
+<p>In the paragraph below we select the link with the href that ends with "pdf" and apply an icon as :after content.</p>
+<p class="story">A humble digital file becomes self-aware and starts conversations with web developers. <em>Read the fascinating account in 
+    <a href="example.pdf">example.pdf</a></em></p>
+</body>
+</html>
